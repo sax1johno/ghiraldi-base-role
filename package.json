@@ -1,0 +1,29 @@
+{
+  "name": "ghiraldi-base-role",
+  "description": "The ghiraldi role plugin is part of the ghiraldi base package of plugins.",
+  "tags": [
+    "ghiraldi",
+    "base",
+    "role"
+  ],
+  "version": "0.0.1",
+  "author": {
+    "name": "John O'Connor",
+    "email": "sax1johno@gmail.com"
+  },
+  "dependencies": {
+    "mongoose": "*",
+    "underscore": "*",
+    "nodeunit": "*"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "github.com/sax1johno/ghiraldi-base-role.git"
+  },
+  "ghiraldi": {
+      "name": "role"
+  },
+  "_id": "ghiraldi-base-role@0.0.1",
+  "_from": "ghiraldi-base-role@0.0.1"
+}
