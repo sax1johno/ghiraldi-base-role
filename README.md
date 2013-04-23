@@ -1,6 +1,6 @@
-ghiraldi-plugin-registry
+ghiraldi-base-role
 ========================
 
-The plugin registry allows for the registration of plugins into a central store and provides access to plugin
-properties for other controllers.  This is particularly useful for things like the admin core plugin, which
-uses the registry to build the admin views for controllers.
+The role plugin adds the concept of user roles to the ghiraldi system.  It's used
+to create different role types in a ghiraldi app and as the basis for access
+control.
