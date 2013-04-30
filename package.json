@@ -6,7 +6,7 @@
     "base",
     "role"
   ],
-  "version": "0.0.1",
+  "version": "0.0.10",
   "author": {
     "name": "John O'Connor",
     "email": "sax1johno@gmail.com"
@@ -24,6 +24,6 @@
   "ghiraldi": {
       "name": "role"
   },
-  "_id": "ghiraldi-base-role@0.0.1",
-  "_from": "ghiraldi-base-role@0.0.1"
+  "_id": "ghiraldi-base-role@0.0.10",
+  "_from": "ghiraldi-base-role@0.0.10"
 }
