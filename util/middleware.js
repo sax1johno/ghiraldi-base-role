@@ -1,13 +1,10 @@
-var mongoose = require('mongoose');
-var Role = require('../models/Role.js');
-// mongoose.connect('mongodb://localhost/test');
-var Role = mongoose.model('Role');
+var schemas = new require('ghiraldi-schema-registry')(),
+    Role = schemas.getModel('Role');
+
 var _ = require('underscore')
 
 function restrictToAdmin(req, res, next) {
     if (req.session.user !== null && req.session.user !== undefined) {
-        var mongoose = require('mongoose');
-        var Role = mongoose.model('Role');
         Role.findById(req.session.user.role, function(err, myRole) {
            if (myRole.title != 'admin') {
                 req.flash('error', 'Not authorized for this action');

@@ -1,8 +1,7 @@
-var mongoose = require('mongoose'),
-    logger = require('ghiraldi-simple-logger');
+var logger = require('ghiraldi-simple-logger'),
+    models = new require('ghiraldi-schema-registry')(),
+    Role = models.getModel('Role');
 
-// require('../models/User.js');
-var Role = mongoose.model('Role');
 var _ = require('underscore');
 
 function get(id, fn) {

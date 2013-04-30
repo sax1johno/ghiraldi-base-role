@@ -1,24 +1,25 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema,
-    ObjectId = Schema.ObjectId,
-    registry = require('mongoose-schema-registry'),
-    _ = require('underscore'),
+var _ = require('underscore'),
+    registry = new require('ghiraldi-schema-registry')(),
     logger = require('ghiraldi-simple-logger');
 
-var Role = registry.getSchema('Role');
-
-Role.add({
-    title    : String
-});
+var Role = {
+    title: String
+}
 
 /** 
  * This Role plugin also modifies the user schema.
  **/
 var User = registry.getSchema('User');
 
-User.add({role : {type: ObjectId, ref: 'Role'}});
+User.relations = {};
 
-registry.add('User', User);
+/** Set up relationship between role and user. **/
+User.relations.hasMany = {
+    Role:   {
+        as: 'roles',  
+        foreignKey: 'roleId'
+    }
+};
 
 module.exports = {
     'Role': Role,
